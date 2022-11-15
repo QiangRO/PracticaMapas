@@ -1,30 +1,31 @@
 package com.example.gps
 
-import android.view.LayoutInflater
+import android.app.Activity
+import android.content.Context
 import android.view.View
 import android.widget.TextView
 import com.example.practicamapas.R
-import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.model.Marker
 
 
-class InfoWindowsCustom(private val inflater: LayoutInflater) : InfoWindowAdapter {
-    override fun getInfoContents(m: Marker): View? {
-        //Carga layout personalizado.
-        val v: View = inflater.inflate(R.layout.info_windows, null)
-        val info = m.title!!.split("&").toTypedArray()
-        val url = m.snippet
-        (v.findViewById(R.id.info_window_direccion) as TextView).text = "Av. Argentina 2083, La Paz"
-        (v.findViewById(R.id.info_window_nombre) as TextView).text = "Universidad del Valle"
-        (v.findViewById(R.id.info_window_telefono) as TextView).text = "Teléfono: 2 2001800"
-        return v
+class InfoWindowsCustom(contexto: Context) : GoogleMap.InfoWindowAdapter {
+    var mWindow = (contexto as Activity).layoutInflater.inflate(R.layout.info_windows, null)
+
+    private fun rendowWindowText(marker: Marker, view: View) {
+        val tvMsgPrincipal = view.findViewById<TextView>(R.id.info_window_textMarker)
+        val tvCoordenadas = view.findViewById<TextView>(R.id.info_window_cordenadas)
+        tvMsgPrincipal.text = marker.title
+        tvCoordenadas.text = marker.snippet
     }
 
-    override fun getInfoWindow(m: Marker): View? {
-        return null
+    override fun getInfoWindow(marker: Marker): View? {
+        rendowWindowText(marker, mWindow)
+        return mWindow
     }
 
-    companion object {
-        private const val TAG = "CustomInfoWindowAdapter"
+    override fun getInfoContents(marker: Marker): View? {
+        rendowWindowText(marker, mWindow)
+        return mWindow
     }
 }

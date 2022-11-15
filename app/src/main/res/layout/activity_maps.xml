@@ -34,6 +34,25 @@
             android:textColor="@color/white"
             android:textAppearance="?attr/textAppearanceCaption"
             style="?attr/materialButtonOutlinedStyle"/>
+
+        <Button
+            android:id="@+id/btnHibrido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:text="Hibrido"
+            android:textColor="@color/white"
+            android:textAppearance="?attr/textAppearanceCaption"
+            style="?attr/materialButtonOutlinedStyle"/>
+        <Button
+            android:id="@+id/btnSatelital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:text="Satelital"
+            android:textColor="@color/white"
+            android:textAppearance="?attr/textAppearanceCaption"
+            style="?attr/materialButtonOutlinedStyle"/>
         <Button
             android:id="@+id/btnTerreno"
             android:layout_width="wrap_content"
@@ -55,11 +74,35 @@
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabPosicion"
+        android:id="@+id/fabMostrarRecorrido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="240dp"
+        android:clickable="true"
+        android:contentDescription="@string/btn_pocision"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCoordenadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="180dp"
+        android:clickable="true"
+        android:contentDescription="@string/btn_pocision"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabHabilitarGPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="120dp"
         android:clickable="true"
         android:contentDescription="@string/btn_pocision"
         app:layout_constraintBottom_toBottomOf="parent"

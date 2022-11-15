@@ -9,43 +9,36 @@
         android:layout_width="118dp"
         android:layout_height="120dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/ic_launcher_background"
+        android:contentDescription="@string/info_description" />
 
     <TextView
-        android:id="@+id/info_window_direccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="-3dp"
-        android:layout_marginTop="14dp"
-        android:layout_toRightOf="@id/info_window_imagen"
-        android:paddingLeft="5dp"
-        android:text="AAA"
-        android:textColor="@color/black"
-        android:textSize="15sp" />
-
-    <TextView
-        android:id="@+id/info_window_nombre"
+        android:id="@+id/info_window_textMarker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:textSize="20sp"
-        android:layout_below="@id/info_window_direccion"
-        android:layout_toRightOf="@id/info_window_imagen"
-        android:paddingLeft="5dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@id/info_window_imagen"
+        android:paddingStart="5dp"
+        android:paddingTop="10dp"
+        android:text="@string/new_marker"
         android:textColor="@color/black"
-        android:text="BBB" />
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/info_window_telefono"
-        android:layout_width="wrap_content"
+        android:id="@+id/info_window_cordenadas"
+        android:layout_width="229dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="61dp"
-        android:layout_toRightOf="@id/info_window_imagen"
-        android:paddingLeft="5dp"
-        android:text="CCC"
+        android:layout_below="@id/info_window_textMarker"
+        android:layout_toEndOf="@id/info_window_imagen"
+        android:paddingStart="5dp"
+        android:paddingTop="10dp"
+        android:text="@string/coordenadas"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp" />
+
 </RelativeLayout>
