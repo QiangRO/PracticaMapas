@@ -43,10 +43,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
     private var isGPSEnabled = false
     private val PERMISSION_ID = 42
-    //Variable que vamos a usar para gestionar el GPS con google play services
-    //FusedLocation: fusionar los datos respectivos a GPS en un objeto
     private lateinit var fusedLocation : FusedLocationProviderClient
-
     private var contador: Int = 0
     private var latitud: Double = 0.0
     private var longitud: Double = 0.0
@@ -85,15 +82,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         }
     }
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     override fun onMapReady(googleMap: GoogleMap) {
 
         mMap = googleMap
@@ -114,9 +102,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
             isZoomControlsEnabled = true // Botones + - zoom in zoom out
             isCompassEnabled = true // la brújula de orientación del mapa
             isMapToolbarEnabled = true // habilito para un marcador la opción de ir a ver una ruta a verlo en la app Mapa Google
-            isRotateGesturesEnabled = false // deshabilitar la opción de rotación del mapa
-            isTiltGesturesEnabled = false // deshabilitar la opción de rotación de la cámara
-            isZoomControlsEnabled = false // deshabilita las opciones de zoom con los dedos del mapa
+            isRotateGesturesEnabled = true // deshabilitar la opción de rotación del mapa
         }
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lapaz,10f))
 
@@ -126,7 +112,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
          * Estilo personalizado de mapa
          */
 
-        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.my_map_style2))
+        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.my_map_style))
 
         mMap.setOnMarkerClickListener(this)
         mMap.setOnMapClickListener {
@@ -253,8 +239,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         //las líneas Polyline dependen de un arreglo o lista de coordenadas
         val polyline = mMap.addPolyline(
             PolylineOptions()
-                .color(Color.BLUE)
-                .width(10f) //ancho de la línea
+                .color(Color.YELLOW)
+                .width(13f) //ancho de la línea
                 .clickable(true) //la línea debe ser clickeada
                 .geodesic(true) //curvatura con respecto al radio de la tierra
         )
