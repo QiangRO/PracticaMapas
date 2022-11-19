@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -40,6 +41,21 @@ android {
 }
 
 dependencies {
+    //FIREBASE
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    // Declare the dependency for the Firebase Authentication library
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    // Declare the dependency for the Cloud Storage library
+    implementation 'com.google.firebase:firebase-storage-ktx'
+    // Glide BumpTech
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'

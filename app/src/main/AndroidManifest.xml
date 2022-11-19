@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Se usa en casos muy especificos -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -17,30 +18,49 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticaMapas"
         tools:targetApi="31">
-
-        <!--
-             TODO: Before you run your application, you need a Google Maps API key.
-
-             To get one, follow the directions here:
-
-                https://developers.google.com/maps/documentation/android-sdk/get-api-key
-
-             Once you have your API key (it starts with "AIza"), define a new property in your
-             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
-             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBcTvcB8Y4t0f0uD3NApH_htXm3E2f8JLw" />
         <activity
-            android:name=".MapsActivity"
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.PracticaMapas.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <!-- PANTALLA DE ELIMINAR CUENTA -->
+        <activity android:name=".DeleteAccountActivity" /> <!-- PANTALLA DE ACTUALIZAR CONTRASEÑA -->
+        <activity android:name=".UpdatePasswordActivity" /> <!-- PANTALLA DE VERIFICAR EMAIL -->
+        <activity android:name=".CheckEmailActivity" /> <!-- PANTALLA DE RECUPERAR CUENTA -->
+        <!-- PANTALLA PRINCIPAL -->
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Main" /> <!-- PANTALLA DE REGISTRARSE -->
+        <activity android:name=".SignUpActivity" /> <!-- PANTALLA DE LOGIN -->
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false"></activity> <!-- PANTALLA DE CARGA -->
+        <activity
+            android:name=".SplashScreen"
             android:exported="true"
-            android:label="@string/title_activity_maps">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBcTvcB8Y4t0f0uD3NApH_htXm3E2f8JLw" /> <!-- PANTALLA DEL MAPA -->
+        <activity
+            android:name=".MapsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>
