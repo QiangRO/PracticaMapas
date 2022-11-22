@@ -6,6 +6,7 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
+import android.location.Geocoder
 import android.location.Location
 import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
@@ -203,8 +204,12 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
         var myLocationRequest = LocationRequest.Builder(
             Priority.PRIORITY_HIGH_ACCURACY,
             INTERVAL_TIME//10 segundos = 10000 milisegundos
-        ).setMaxUpdates(50).build()
-        fusedLocation.requestLocationUpdates(myLocationRequest, myLocationCallback, Looper.myLooper())
+        ).setMaxUpdates(2)
+            .build()
+        fusedLocation.requestLocationUpdates(
+            myLocationRequest,
+            myLocationCallback,
+            Looper.myLooper())
     }
 
     private fun requestPermissionsLocation() {
@@ -218,6 +223,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
                 var lastLatitude = myLastLocation.latitude
                 var lastLongitude = myLastLocation.longitude
                 var pos = LatLng(lastLatitude, lastLongitude)
+                mMap.clear()
                 mMap.addMarker(MarkerOptions()
                     .position(pos)
                     .title("Ubicación ${contador}")
@@ -231,7 +237,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
                 latitud = myLastLocation.latitude
                 longitud = myLastLocation.longitude
                 contador++
+                getAddressName()
             }
+        }
+    }
+
+    private fun getAddressName() {
+        val geocoder = Geocoder(this)
+        try {
+            val direcciones = geocoder.getFromLocation(latitud,longitud,1)
+            binding.txtDireccion.text = direcciones.get(0).getAddressLine(0)
+        }catch (e:Exception){
+            binding.txtDireccion.text="No se puede obtener la direccion"
         }
     }
 

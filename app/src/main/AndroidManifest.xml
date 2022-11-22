@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Se usa en casos muy especificos -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.location.gps" />
 
     <application
         android:allowBackup="true"
@@ -18,15 +19,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticaMapas"
         tools:targetApi="31">
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.PracticaMapas.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
         <!-- PANTALLA DE ELIMINAR CUENTA -->
         <activity android:name=".DeleteAccountActivity" /> <!-- PANTALLA DE ACTUALIZAR CONTRASEÑA -->
         <activity android:name=".UpdatePasswordActivity" /> <!-- PANTALLA DE VERIFICAR EMAIL -->
@@ -38,7 +30,9 @@
         <activity android:name=".SignUpActivity" /> <!-- PANTALLA DE LOGIN -->
         <activity
             android:name=".SignInActivity"
-            android:exported="false"></activity> <!-- PANTALLA DE CARGA -->
+            android:exported="false">
+        </activity>
+        <!-- PANTALLA DE CARGA -->
         <activity
             android:name=".SplashScreen"
             android:exported="true"
@@ -46,21 +40,31 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <!-- API KEY DE GOOGLE MAPS-->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBcTvcB8Y4t0f0uD3NApH_htXm3E2f8JLw" /> <!-- PANTALLA DEL MAPA -->
+            android:value="AIzaSyBcTvcB8Y4t0f0uD3NApH_htXm3E2f8JLw" />
+        <!-- PANTALLA DEL MAPA -->
         <activity
             android:name=".MapsActivity"
-            android:exported="true"
-            android:label="@string/title_activity_maps"></activity>
-    </application>
+            android:exported="false"
+            android:label="@string/title_activity_maps">
+        </activity>
+        <!-- PANTALLA CON MENU DESPLEGABLE-->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.PracticaMapas.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
 
+        </activity>
+    </application>
 </manifest>

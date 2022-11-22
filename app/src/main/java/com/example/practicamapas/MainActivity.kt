@@ -37,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
             updateProfile(name)
         }
+        binding.mainMenuCompatButton.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            this.startActivity(intent)
+        }
 
         binding.profileImageView.setOnClickListener {
             fileManager()
@@ -148,7 +152,6 @@ class MainActivity : AppCompatActivity() {
                 .placeholder(R.drawable.ic_profile)
                 .into(binding.bgProfileImageView)
         }
-
     }
 
     private  fun signOut(){

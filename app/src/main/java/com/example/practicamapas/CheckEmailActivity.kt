@@ -38,7 +38,6 @@ class CheckEmailActivity : AppCompatActivity() {
                         }
                     }
                 }
-
         }
 
         binding.signOutImageView.setOnClickListener {

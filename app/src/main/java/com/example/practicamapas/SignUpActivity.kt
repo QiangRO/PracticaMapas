@@ -24,7 +24,6 @@ class SignUpActivity : AppCompatActivity() {
         auth = Firebase.auth
 
         binding.signUpButton.setOnClickListener {
-
             val mEmail = binding.emailEditText.text.toString()
             val mPassword = binding.passwordEditText.text.toString()
             val mRepeatPassword = binding.repeatPasswordEditText.text.toString()
@@ -46,7 +45,6 @@ class SignUpActivity : AppCompatActivity() {
             } else {
                 createAccount(mEmail, mPassword)
             }
-
         }
 
         binding.backImageView.setOnClickListener {
