@@ -35,7 +35,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="@string/all"
-            app:srcCompat="@drawable/ic_logo"
+            app:srcCompat="@drawable/gpsicon"
             tools:ignore="VectorDrawableCompat" />
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/title_active_login"
-            android:textColor="@color/black"
+            android:textColor="@color/color_progress"
             android:textSize="24sp" />
     </LinearLayout>
 

@@ -23,7 +23,6 @@
             android:layout_marginLeft="24dp"
             android:layout_marginTop="24dp"
             android:gravity="center"
-            android:textColor="@color/black_500"
             android:layout_marginRight="24dp"
             android:text="@string/title_delete_account" />
 
@@ -59,12 +58,12 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/deleteAccountAppCompatButton"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
             android:layout_marginTop="32dp"
             android:background="@drawable/ic_buttom"
             android:paddingLeft="64dp"
             android:paddingRight="64dp"
-            android:layout_gravity="center"
             android:text="@string/delete"
             android:textColor="@color/white" />
     </LinearLayout>

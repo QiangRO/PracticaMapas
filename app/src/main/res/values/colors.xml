@@ -9,7 +9,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black_transparent">#B0000000</color>
+    <color name="color_progress_transparent">#66FF2376</color>
     <color name="color_progress">#FF2376</color>
+    <color name="color_progress2">#DD004C</color>
     <color name="black_500">#262626</color>
 
     <color name="primaryColor">#d81b60</color>
