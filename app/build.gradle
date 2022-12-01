@@ -46,9 +46,18 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
     // Declare the dependency for the Firebase Authentication library
+    //FIREBASE AUTHENTICATION
     implementation 'com.google.firebase:firebase-auth-ktx'
     // Declare the dependency for the Cloud Storage library
+    //FIREBASE STORAGE
     implementation 'com.google.firebase:firebase-storage-ktx'
+    // Import the BoM for the Firebase platform
+    //FIREBASE BoM
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    // Add the dependency for the Realtime Database library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    //FIREBASE REALTIME DATABASE
+    implementation 'com.google.firebase:firebase-database'
     // Glide BumpTech
     implementation 'com.github.bumptech.glide:glide:4.13.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'

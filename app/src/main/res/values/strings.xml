@@ -59,7 +59,7 @@
     <string name="btn_habilitar_gps">Habilitar GPS</string>
     <string name="btn_habilitar_coordenadas">Captar coordenadas</string>
     <string name="btn_recorrido">Recorrido</string>
-    <string name="splash_title">Naviworld</string>
+    <string name="splash_title">Clinica Dental</string>
     <string name="image_description">Imagen de pantalla de carga</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -77,4 +77,13 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="buscar">Buscar</string>
+
+    //Activity Citas
+    <string name="btn_Registrar">Registrar</string>
+    <string name="fecha_cita_campo">Fecha de cita</string>
+    <string name="hora_Iniciocita_campo">Hora inicio cita</string>
+    <string name="hora_Finalcita_campo">Hora final cita</string>
+    <string name="motivo_campo">Motivo de cita</string>
+    <string name="estado_campo">Estado de cita</string>
+    <string name="titulo_activity">Agenda tu cita</string>
 </resources>
