@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.practicamapas.databinding.ActivityCitaBinding
+import com.example.practicamapas.timepicker.TimePickerFragment
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
 import java.time.LocalDateTime
 
 class CitaActivity : AppCompatActivity() {
@@ -39,5 +39,11 @@ class CitaActivity : AppCompatActivity() {
             }
         }
     }
-
+    private fun showTimePickerDialog() {
+        val timePicker = TimePickerFragment{onTimeSelected(it)}
+        timePicker.show(supportFragmentManager, "time")
+    }
+    private fun onTimeSelected(time: String) {
+        binding.etdHoraInicioCita.setText("Has seleccionado las: $time")
+    }
 }

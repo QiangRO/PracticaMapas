@@ -1,5 +1,5 @@
 <resources>
-    <string name="title_active_login">Naviworld Login</string>
+    <string name="title_active_login">Clinica Europa Login</string>
     <string name="password">Contraseña</string>
     <string name="new_password">Nueva contraseña</string>
     <string name="current_password">Contraseña actual</string>
@@ -81,9 +81,17 @@
     //Activity Citas
     <string name="btn_Registrar">Registrar</string>
     <string name="fecha_cita_campo">Fecha de cita</string>
-    <string name="hora_Iniciocita_campo">Hora inicio cita</string>
+    <string name="hora_Iniciocita_campo">Seleccione la hora de su cita</string>
     <string name="hora_Finalcita_campo">Hora final cita</string>
     <string name="motivo_campo">Motivo de cita</string>
     <string name="estado_campo">Estado de cita</string>
     <string name="titulo_activity">Agenda tu cita</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    //HARDCODE
+    <string name="fecha_cita">Fecha de cita</string>
+    <string name="hora_cita">Hora de cita</string>
+    <string name="motivo_cita">Motivo de cita</string>
+    <string name="example">example</string>
+
 </resources>

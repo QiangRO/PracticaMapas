@@ -1,21 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#d81b60</color>
-    <color name="purple_700">#a00037</color>
-    <color name="teal_200">#d81b60</color>
-    <color name="teal_700">#ff5c8d</color>
+    <color name="purple_200">#007c91</color>
+    <color name="purple_500">#20A2B8</color>
+    <color name="purple_700">#007c91</color>
+    <color name="teal_200">#1CA6BD</color>
+    <color name="teal_700">#4DDFF8</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black_transparent">#B0000000</color>
-    <color name="color_progress_transparent">#66FF2376</color>
-    <color name="color_progress">#FF2376</color>
-    <color name="color_progress2">#DD004C</color>
+    <color name="color_progress_transparent">#005260</color>
+    <color name="color_progress">#39D9F4</color>
+    <color name="color_progress2">#09879C</color>
     <color name="black_500">#262626</color>
 
-    <color name="primaryColor">#d81b60</color>
-    <color name="primaryLightColor">#ff5c8d</color>
-    <color name="primaryDarkColor">#a00037</color>
-    <color name="primaryTextColor">#ffffff</color>
+    <color name="purple_2002">#FFBB86FC</color>
+    <color name="purple_5002">#d81b60</color>
+    <color name="purple_7002">#a00037</color>
+    <color name="teal_2002">#d81b60</color>
+    <color name="teal_7002">#ff5c8d</color>
+    <color name="black2">#FF000000</color>
+    <color name="white2">#FFFFFFFF</color>
+    <color name="black_transparent2">#B0000000</color>
+    <color name="color_progress_transparent2">#66FF2376</color>
+    <color name="color_progress11">#FF2376</color>
+    <color name="color_progress22">#DD004C</color>
+    <color name="black_5002">#262626</color>
+
+    <color name="primaryColor">#00acc1</color>
+    <color name="primaryLightColor">#5ddef4</color>
+    <color name="primaryDarkColor">#007c91</color>
+    <color name="primaryTextColor">#000000</color>
+
+    <color name="primaryColor2">#00acc1</color>
+    <color name="primaryLightColor2">#5ddef4</color>
+    <color name="primaryDarkColor2">#007c91</color>
+    <color name="primaryTextColor2">#000000</color>
 </resources>
