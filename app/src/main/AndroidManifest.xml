@@ -20,26 +20,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticaMapas"
         tools:targetApi="31">
+        <!--PANTALLA PARA VER LAS CITAS-->
         <activity
             android:name=".Homecita"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <!-- PANTALLA DE REGISTRO DE CITAS -->
-        <activity
-            android:name=".CitaActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!-- PANTALLA DE REGISTRO DE CITAS -->
+        <activity
+            android:name=".CitaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+
         </activity> <!-- PANTALLA DE ELIMINAR CUENTA -->
         <activity android:name=".DeleteAccountActivity" /> <!-- PANTALLA DE ACTUALIZAR CONTRASEÑA -->
         <activity android:name=".UpdatePasswordActivity" /> <!-- PANTALLA DE VERIFICAR EMAIL -->

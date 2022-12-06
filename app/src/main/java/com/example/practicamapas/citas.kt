@@ -5,6 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.practicamapas.Adapter.MyAdapter
+import com.example.practicamapas.Models.CitaViewModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,6 +22,9 @@ private const val ARG_PARAM2 = "param2"
  * Use the [citas.newInstance] factory method to
  * create an instance of this fragment.
  */
+private lateinit var viewModel: CitaViewModel
+private lateinit var userRecyclerView: RecyclerView
+lateinit var adapter: MyAdapter
 class citas : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
@@ -55,5 +64,17 @@ class citas : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        userRecyclerView = view.findViewById(R.id.recyclerView)
+        userRecyclerView.layoutManager = LinearLayoutManager(context)
+        userRecyclerView.setHasFixedSize(true)
+        adapter = MyAdapter()
+        userRecyclerView.adapter = adapter
+        viewModel = ViewModelProvider(this).get(CitaViewModel::class.java)
+        viewModel.allCitas.observe(viewLifecycleOwner, Observer {
+            adapter.updateCitaLista(it)
+        })
     }
 }
