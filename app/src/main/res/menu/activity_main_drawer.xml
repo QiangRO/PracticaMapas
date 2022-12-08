@@ -5,9 +5,13 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/homecita"
             android:icon="@drawable/ic_home_32"
-            android:title="@string/nav_home" />
+            android:title="@string/menu_citas" />
+        <item
+            android:id="@+id/radiografiaActivity"
+            android:icon="@drawable/ic_image_32"
+            android:title="@string/menu_radiografias" />
         <item
             android:id="@+id/mapsActivity"
             android:icon="@drawable/ic_baseline_gps_32"
@@ -16,6 +20,7 @@
             android:id="@+id/mainActivity"
             android:icon="@drawable/ic_settings_32"
             android:title="@string/configuration_profile" />
+
 <!--        <item-->
 <!--            android:id="@+id/logout"-->
 <!--            android:icon="@drawable/ic_sign_out"-->

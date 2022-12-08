@@ -69,11 +69,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Configuracion del menu</string>
 
-    <string name="map_gps">Trazado de mapas</string>
+    <string name="map_gps">Clinica europa</string>
     <string name="menu_home">Menu Home</string>
     <string name="nav_home">Menu principal</string>
     <string name="logout_app">Cerrar sesion</string>
     <string name="configuration_profile">Configurar perfil</string>
+    <string name="menu_radiografias">Ver radiografias</string>
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_citas">Ver citas</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="buscar">Buscar</string>

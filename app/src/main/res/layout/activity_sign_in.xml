@@ -23,7 +23,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="@string/all"
-            app:srcCompat="@drawable/gpsicon"
+            app:srcCompat="@drawable/dientes2"
             tools:ignore="VectorDrawableCompat" />
 
         <TextView

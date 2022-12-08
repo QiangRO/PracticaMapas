@@ -20,28 +20,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticaMapas"
         tools:targetApi="31">
-        <!--PANTALLA PARA VER LAS CITAS-->
         <activity
-            android:name=".Homecita"
-            android:exported="true">
+            android:name=".RadiografiaActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <!-- PANTALLA DE REGISTRO DE CITAS -->
+        <!-- PANTALLA PARA VER LAS CITAS -->
         <activity
-            android:name=".CitaActivity"
+            android:name=".Homecita"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
 
 
+        </activity> <!-- PANTALLA DE REGISTRO DE CITAS -->
+        <activity
+            android:name=".CitaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity> <!-- PANTALLA DE ELIMINAR CUENTA -->
         <activity android:name=".DeleteAccountActivity" /> <!-- PANTALLA DE ACTUALIZAR CONTRASEÑA -->
         <activity android:name=".UpdatePasswordActivity" /> <!-- PANTALLA DE VERIFICAR EMAIL -->
@@ -56,11 +57,16 @@
             android:exported="false" /> <!-- PANTALLA DE CARGA -->
         <activity
             android:name=".SplashScreen"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity> <!-- API KEY DE GOOGLE MAPS -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"

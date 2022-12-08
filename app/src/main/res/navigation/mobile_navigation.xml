@@ -26,4 +26,14 @@
         android:name="com.example.practicamapas.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/homecita"
+        android:name="com.example.practicamapas.Homecita"
+        android:label="activity_homecita"
+        tools:layout="@layout/activity_homecita" />
+    <activity
+        android:id="@+id/radiografiaActivity"
+        android:name="com.example.practicamapas.RadiografiaActivity"
+        android:label="activity_radiografia"
+        tools:layout="@layout/activity_radiografia" />
 </navigation>
